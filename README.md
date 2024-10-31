@@ -106,6 +106,12 @@ It is necessary to have the server turned on with:
 - MySQL Database
 - Apache Web Server
 
+## Install the necessary dependencies
+
+```bash
+composer install
+```
+
 ## Execute the necessary commands to create your database and insert the necessary data (Areas and Roles).
 
 Runs migrations to create the database and tables automatically
@@ -113,16 +119,10 @@ Runs migrations to create the database and tables automatically
 php artisan migrate
 ```
 
-To quickly insert Areas and Roles execute the following commands
+To quickly insert data in the Areas and Roles table, execute the following commands
 ```bash
 php artisan insert:areas
 php artisan insert:roles
-```
-
-## Install the necessary dependencies
-
-```bash
-composer install
 ```
 
 ## You can now run the project
