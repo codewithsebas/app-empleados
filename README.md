@@ -100,6 +100,12 @@ AWS_USE_PATH_STYLE_ENDPOINT=false
 VITE_APP_NAME="${APP_NAME}"
 ```
 
+## Start your local server, you can use any of the existing servers such as XAMPP, WAMP or Laragon.
+It is necessary to have the server turned on with:
+
+- MySQL Database
+- Apache Web Server
+
 ## Execute the necessary commands to create your database and insert the necessary data (Areas and Roles).
 
 Runs migrations to create the database and tables automatically
