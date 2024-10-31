@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre', 255)->notNullable();
+            $table->increments('id')->comment('Identificador del rol');
+            $table->string('nombre', 255)->notNullable()->comment('Nombre del rol');
             $table->timestamps();
         });
     }

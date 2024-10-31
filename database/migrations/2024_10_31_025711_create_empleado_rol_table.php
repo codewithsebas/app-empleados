@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('empleado_rol', function (Blueprint $table) {
-            $table->unsignedInteger('empleado_id');
-            $table->unsignedInteger('rol_id');
+            $table->unsignedInteger('empleado_id')->comment('Identificador del empleado');
+            $table->unsignedInteger('rol_id')->comment('Identificador del rol');
             
+            // Se define la relación con la tabla areas
             $table->foreign('empleado_id')->references('id')->on('empleados')->onDelete('cascade');
             $table->foreign('rol_id')->references('id')->on('roles')->onDelete('cascade');
-            
-            $table->primary(['empleado_id', 'rol_id']);
         });
     }
 

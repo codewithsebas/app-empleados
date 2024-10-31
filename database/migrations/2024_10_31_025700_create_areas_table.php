@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('areas', function (Blueprint $table) {
-            $table->increments('id', 11);
-            $table->string('nombre', 255)->notNullable();
+            $table->increments('id')->comment('Identificador del área');
+            $table->string('nombre', 255)->notNullable()->comment('Nombre del área de la empresa');
             $table->timestamps();
         });
     }
